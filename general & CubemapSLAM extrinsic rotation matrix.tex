@@ -1,0 +1,55 @@
+\textbf{extrinsic rotation} \\
+\begin{align}
+\text{(general)} \
+  \textbf{R} = \textbf{R}_x(\gamma) \, \textbf{R}_y(\beta) \, \textbf{R}_z(\alpha) &=
+  \overset{\text{roll}}
+  {\begin{bmatrix}
+    \cos \gamma & -\sin \gamma & 0 \\
+    \sin \gamma &  \cos \gamma & 0 \\
+     0          &   0          & 1 \\
+  \end{bmatrix}}
+  \overset{\text{pitch}}
+  {\begin{bmatrix}
+    \cos \beta & 0 & \sin \beta \\
+     0         & 1 &  0 \\
+   -\sin \beta & 0 & \cos \beta \\
+  \end{bmatrix}}
+  \overset{\text{yaw}}
+  {\begin{bmatrix}
+    1 &  0          &   0 \\
+    0 & \cos \alpha & -\sin \alpha \\
+    0 & \sin \alpha &  \cos \alpha \\
+  \end{bmatrix}} \\
+  &= \begin{bmatrix}
+    \cos\beta\cos\gamma & \sin\alpha\sin\beta\cos\gamma - \cos\alpha\sin\gamma & \cos\alpha\sin\beta\cos\gamma + \sin\alpha\sin\gamma \\
+    \cos\beta\sin\gamma & \sin\alpha\sin\beta\sin\gamma + \cos\alpha\cos\gamma & \cos\alpha\sin\beta\sin\gamma - \sin\alpha\cos\gamma \\
+    -\sin\beta          & \sin\alpha\cos\beta                                  & \cos\alpha\cos\beta \\
+  \end{bmatrix}
+\\
+\\
+\text{(CubemapSLAM)} \
+  \textbf{R} = \textbf{R}_z(\gamma) \, \textbf{R}_x(\beta) \, \textbf{R}_y(\alpha) &=
+  \overset{\text{roll}}
+  {\begin{bmatrix}
+    \cos \gamma & -\sin \gamma & 0 \\
+    \sin \gamma &  \cos \gamma & 0 \\
+     0          &   0          & 1 \\
+  \end{bmatrix}}
+  \overset{\text{pitch}}
+  {\begin{bmatrix}
+    \cos \beta & 0 & \sin \beta \\
+     0         & 1 &  0 \\
+   -\sin \beta & 0 & \cos \beta \\
+  \end{bmatrix}}
+  \overset{\text{yaw}}
+  {\begin{bmatrix}
+    1 &  0          &   0 \\
+    0 & \cos \alpha & -\sin \alpha \\
+    0 & \sin \alpha &  \cos \alpha \\
+  \end{bmatrix}} \\
+  &= \begin{bmatrix}
+    \cos\beta\cos\gamma & \sin\alpha\sin\beta\cos\gamma - \cos\alpha\sin\gamma & \cos\alpha\sin\beta\cos\gamma + \sin\alpha\sin\gamma \\
+    \cos\beta\sin\gamma & \sin\alpha\sin\beta\sin\gamma + \cos\alpha\cos\gamma & \cos\alpha\sin\beta\sin\gamma - \sin\alpha\cos\gamma \\
+    -\sin\beta          & \sin\alpha\cos\beta                                  & \cos\alpha\cos\beta \\
+  \end{bmatrix}
+\end{align}

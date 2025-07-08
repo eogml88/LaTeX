@@ -1,0 +1,37 @@
+\textbf{T}_{cw}
+=
+\begin{bmatrix}
+\textbf{R}_{cw} & \textbf{t}_{cw} \\
+\textbf{0} & 1
+\end{bmatrix}
+= 
+\begin{bmatrix}
+r_{11} & r_{12} & r_{13} & t_{x} \\
+r_{21} & r_{22} & r_{23} & t_{y} \\
+r_{31} & r_{32} & r_{33} & t_{z} \\
+0 & 0 & 0 & 1
+\end{bmatrix} \\
+
+\textbf{T}_{wc}
+=\textbf{T}_{cw}^{-1}
+=
+\begin{bmatrix}
+\textbf{R}_{cw}^{-1} & -\textbf{R}_{cw}^{-1}\cdot \textbf{t}_{cw} \\
+\textbf{0} & 1
+\end{bmatrix}
+
+=
+\begin{bmatrix}
+\textbf{R}_{cw}^{T} & -\textbf{R}_{cw}^{T}\cdot \textbf{t}_{cw} \\
+\textbf{0} & 1
+\end{bmatrix}
+= 
+\begin{bmatrix}
+\textbf{R}_{wc} & -\textbf{R}_{wc}\cdot \textbf{t}_{cw} \\
+\textbf{0} & 1
+\end{bmatrix} \\ 
+
+∴\textbf{T}_{wc} = \textbf{T}_{cw}^{-1} = \textbf{T}_{cw}^{T}\ 
+∵\textbf{R}_{cw}^{-1} = \textbf{R}_{cw}^{T} = \textbf{R}_{wc} \\
+
+\textbf{R}_{cw}:\text{rotation},\ \textbf{t}_{cw}:\text{translation}
